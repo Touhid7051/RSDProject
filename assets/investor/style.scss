@@ -1,17 +1,7 @@
 $color-paid: #7fdbff;
 $color-sent: #39cccc;
 
-body, html {
-  height: 100%;
-}
 
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "fira-sans-2", Verdana, sans-serif;
-}
 
 #q-graph {
   display: block; /* fixes layout wonkiness in FF1.5 */

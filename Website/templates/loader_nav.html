@@ -220,21 +220,31 @@
                                     <span class="submenu"></span>
                                     <ul class="dropdown-menu">
                                         <li>
-                                            <a href="#">About Investment</a>
+                                            <a href="{% url 'about_investment' %}">About Investment</a>
                                             {#	                                        about URL#}
                                         </li>
                                         <li>
-                                            <a href="#">Investment Policy</a>
+                                            <a href="{% url 'investment_policy' %}">Investment Policy</a>
                                             {#	                                        Trams and conditions URL#}
                                         </li>
                                         <li>
                                             <a href="{% url 'investor_req' %}">Investor Request</a>
                                             {#											investor request URL#}
                                         </li>
-                                        <li>
+                                        {% if user.is_authenticated %}
+                                        
+                                             <li>
+                                            <a href="{% url 'p_home' %}">Investor Panel</a>
+                                            {#											login Url#}
+                                        </li>
+
+	                                        {% else %}
+                                             <li>
                                             <a href="{% url 'login' %}">Investor login</a>
                                             {#											login Url#}
                                         </li>
+
+	                                    {% endif %}
 
 {#                                        <li>#}
 {#                                            <a href="{% url 'testimonial' %}">Testimonials</a>#}
